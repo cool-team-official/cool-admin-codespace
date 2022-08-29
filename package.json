@@ -1,0 +1,23 @@
+{
+  "name": "cool-admin-codespace",
+  "version": "1.0.0",
+  "description": "CoolAdmin集成化开发环境",
+  "main": "index.js",
+  "scripts": {
+    "cool:init": "sh cool-init.sh",
+    "db:start": "docker-compose up -d",
+    "db:stop": "docker-compose down",
+    "db:restart": "docker-compose restart",
+    "db:logs": "docker-compose logs -f"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cool-team-official/cool-admin-codespace.git"
+  },
+  "author": "LiDong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cool-team-official/cool-admin-codespace/issues"
+  },
+  "homepage": "https://github.com/cool-team-official/cool-admin-codespace#readme"
+}
