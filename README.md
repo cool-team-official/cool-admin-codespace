@@ -8,6 +8,8 @@ CoolAdmin 集成化开发环境
 
 选择 `Create codespace on main` 创建一个新的 codespace.
 
+也可以在 vscode 中安装`GitHub Codespace`插件, 并在`GitHub Codespace`中创建一个新的 codespace.
+
 ## 集成命令
 
 ```bash
