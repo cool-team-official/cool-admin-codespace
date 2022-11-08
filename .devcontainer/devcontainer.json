@@ -2,8 +2,7 @@
 	// "name": "workspace",
 	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
 	"containerEnv": {
-	  "TZ": "Asia/Shanghai",
-	  "LANG": "zh_CN.UTF-8",
+	  "TZ": "Asia/Shanghai"
 	},
 	// Features to add to the dev container. More info: https://containers.dev/implementors/features.
 	"features": {
