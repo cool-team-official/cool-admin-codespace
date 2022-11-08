@@ -6,7 +6,9 @@
 	},
 	// Features to add to the dev container. More info: https://containers.dev/implementors/features.
 	"features": {
-	  "ghcr.io/devcontainers/features/docker-from-docker:1": {}
+	  "ghcr.io/devcontainers/features/docker-from-docker:1": {
+		"moby": false
+	  }
 	},
 	"customizations": {
 	  "vscode": {

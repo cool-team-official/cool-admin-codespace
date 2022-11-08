@@ -7,10 +7,15 @@
 # 出错退出
 set -e
 
-# 如果 REMOTE_CONTAINERS 为 true，则为容器开发环境,进行相关配置
+# 如果 REMOTE_CONTAINERS 为 true,则为容器开发环境,进行相关配置
 if [ "$REMOTE_CONTAINERS" = "true" ]; then
-    # 容器开发环境，配置容器内部的环境变量
+    # 容器开发环境,配置容器内部的环境变量
     echo "Configuring environment variables for container development environment"
+    # 设置 first-run-notice.txt
+    echo "Welcome to use CoolAdminCodespace!" > /usr/local/etc/vscode-dev-containers/first-run-notice.txt
+    echo "欢迎使用 CoolAdminCodespace!" >> /usr/local/etc/vscode-dev-containers/first-run-notice.txt
+    echo "Github:https://github.com/cool-team-official/cool-admin-codespace" >> /usr/local/etc/vscode-dev-containers/first-run-notice.txt
+
     # 设置docker mirror
     echo "Setting docker mirror"
     mkdir -p /etc/docker
@@ -42,9 +47,9 @@ EOF
 
 fi
 
-# 如果 CODESPACES 为 true，则为codespaces开发环境,进行相关配置
+# 如果 CODESPACES 为 true,则为codespaces开发环境,进行相关配置
 if [ "$CODESPACES" = "true" ]; then
-    # codespaces开发环境，配置codespaces内部的环境变量
+    # codespaces开发环境,配置codespaces内部的环境变量
     echo "Configuring environment variables for codespaces development environment"
     # 安装cool-tools
     echo "Installing cool-tools ..."

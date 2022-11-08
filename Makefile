@@ -4,6 +4,7 @@
 init: ## 初始化项目
 	@echo "初始化项目"
 	@bash ./scripts/init.sh
+	@echo "初始化完成"
 
 # 启动mysql
 .PHONY: mysql-up
