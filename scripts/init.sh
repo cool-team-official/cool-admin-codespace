@@ -29,4 +29,31 @@ EOF
     echo "Configuring npm mirror"
     npm config set registry https://registry.npmmirror.com
 
+    # 安装cool-tools
+    echo "Installing cool-tools ..."
+    go install github.com/cool-team-official/cool-admin-go/cool-tools@latest
+    # 安装gf
+    echo "Installing gf use mirror ..."
+    wget -O gf  \
+        https://gh.hjmcloud.cn/github.com/gogf/gf/releases/latest/download/gf_$(go env GOOS)_$(go env GOARCH) \
+        && chmod +x gf \
+        && ./gf install -y \
+        && rm ./gf
+
+fi
+
+# 如果 CODESPACES 为 true，则为codespaces开发环境,进行相关配置
+if [ "$CODESPACES" = "true" ]; then
+    # codespaces开发环境，配置codespaces内部的环境变量
+    echo "Configuring environment variables for codespaces development environment"
+    # 安装cool-tools
+    echo "Installing cool-tools ..."
+    go install github.com/cool-team-official/cool-admin-go/cool-tools@latest
+    # 安装gf
+    echo "Installing gf ..."
+    wget -O gf  \
+        https://github.com/gogf/gf/releases/latest/download/gf_$(go env GOOS)_$(go env GOARCH) \
+        && chmod +x gf \
+        && ./gf install -y \
+        && rm ./gf
 fi
