@@ -16,7 +16,7 @@ if [ "$REMOTE_CONTAINERS" = "true" ]; then
     mkdir -p /etc/docker
     cat >/etc/docker/daemon.json <<EOF
 {
-    "registry-mirrors": ["https://registry.docker-cn.com"]
+    "registry-mirrors": ["https://registry.docker-cn.com","https://docker.mirrors.ustc.edu.cn"]
 }
 EOF
 
