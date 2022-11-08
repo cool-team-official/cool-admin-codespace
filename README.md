@@ -12,6 +12,20 @@ CoolAdmin 集成化开发环境
 
 也可以在 vscode 中安装`GitHub Codespace`插件, 并在`GitHub Codespace`中创建一个新的 codespace.
 
+## 手动拉取镜像
+
+如果镜像摘取失败或拉取速度过慢, 可以手动拉取镜像.
+
+```bash
+# Docker Hub
+docker pull gcslaoli/cool-admin-codespace
+```
+
+```bash
+# Aliyun
+docker pull registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-codespace
+```
+
 ## 集成命令
 
 启动 mysql 数据库
