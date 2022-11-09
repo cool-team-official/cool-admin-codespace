@@ -1,14 +1,8 @@
 {
 	// "name": "workspace",
-	"image": "gcslaoli/cool-admin-codespace",
+	// "image": "gcslaoli/cool-admin-codespace",
 	"containerEnv": {
 	  "TZ": "Asia/Shanghai"
-	},
-	// Features to add to the dev container. More info: https://containers.dev/implementors/features.
-	"features": {
-	  "ghcr.io/devcontainers/features/docker-from-docker:1": {
-		"moby": false
-	  }
 	},
 	"customizations": {
 	  "vscode": {
@@ -20,6 +14,7 @@
 		  "golang.go",
 		  "esbenp.prettier-vscode",
 		  "dbaeumer.vscode-eslint",
+		  "vue.volar",
 		  "cweijan.vscode-database-client2"
 		]
 	  }
