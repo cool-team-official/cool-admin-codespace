@@ -13,20 +13,6 @@ go: go1.19.3 linux/amd64
 docker: 20.10.21
 ```
 
-## 手动拉取镜像
-
-如果镜像摘取失败或拉取速度过慢, 可以手动拉取镜像.
-
-```bash
-# Docker Hub
-docker pull gcslaoli/cool-admin-codespace
-```
-
-```bash
-# Aliyun
-docker pull registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-codespace
-```
-
 ## 下载项目
 
 ```bash
@@ -51,3 +37,17 @@ unzip cool-admin-codespace.zip
 2. 安装 [VSCode](https://code.visualstudio.com/)
 3. 安装 [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) 插件
 4. 打开项目, 点击左下角的绿色按钮, 选择 `Reopen in Container` 即可
+
+## 手动拉取镜像
+
+如果镜像摘取失败或拉取速度过慢, 可以手动拉取镜像.
+
+```bash
+# Docker Hub
+docker pull gcslaoli/cool-admin-codespace
+```
+
+```bash
+# Aliyun
+docker pull registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-codespace
+```
