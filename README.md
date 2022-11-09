@@ -51,3 +51,7 @@ docker pull gcslaoli/cool-admin-codespace
 # Aliyun
 docker pull registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-codespace
 ```
+
+## Gitee 镜像
+
+[![李栋/cool-admin-codespace](https://gitee.com/gcslaoli/cool-admin-codespace/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/gcslaoli/cool-admin-codespace)
