@@ -1,0 +1,11 @@
+{
+  "name": "cool-admin-codespace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cool-team-official/cool-admin-codespace",
+  "author": "cnlidong@live.cn",
+  "license": "MIT",
+  "devDependencies": {
+    "@devcontainers/cli": "^0.23.2"
+  }
+}
