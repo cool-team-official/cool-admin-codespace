@@ -35,6 +35,16 @@ git clone --depth=1 --branch=local https://github.com/cool-team-official/cool-ad
 
 或者下载 [zip](https://github.com/cool-team-official/cool-admin-codespace/archive/refs/heads/local.zip) 文件.
 
+```bash
+wget -O cool-admin-codespace.zip https://github.com/cool-team-official/cool-admin-codespace/archive/refs/heads/local.zip
+```
+
+解压
+
+```bash
+unzip cool-admin-codespace.zip
+```
+
 ## 使用
 
 1. 安装 [Docker](https://www.docker.com/products/docker-desktop)
