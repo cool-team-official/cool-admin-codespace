@@ -16,5 +16,6 @@
       ]
     }
   },
+  "postCreateCommand": "npm install -g @devcontainers/cli",
   "remoteUser": "root"
 }
