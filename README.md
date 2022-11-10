@@ -21,14 +21,14 @@ docker login --username=cnlidong
 docker login --username=cnlidong@live.cn registry.cn-beijing.aliyuncs.com
 ```
 
-3. 构建镜像
+3. 安装依赖
 
 ```bash
-yarn build
+npm install -g @devcontainers/cli
 ```
 
-4. 推送镜像
+4. 构建镜像
 
 ```bash
-yarn push
+image-build/build-image.sh gcslaoli/cool-admin-codespace:dev true "linux/arm64"
 ```
