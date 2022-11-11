@@ -1,9 +1,14 @@
 {
 	"build": {
 		"dockerfile": "Dockerfile"
-	  },
+	},
 	"features": {
-		// "ghcr.io/devcontainers/features/docker-in-docker:1": {},
+		"ghcr.io/devcontainers/features/common-utils:1": {
+			"version": "latest",
+			"nonFreePackages": true
+		},
+		"ghcr.io/devcontainers/features/python:1": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:1": {},
 		"ghcr.io/devcontainers/features/go:1": {},
 		"ghcr.io/devcontainers/features/node:1": {}
 	}

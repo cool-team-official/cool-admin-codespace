@@ -26,9 +26,32 @@ docker login --username=cnlidong@live.cn registry.cn-beijing.aliyuncs.com
 ```bash
 npm install -g @devcontainers/cli
 ```
-
-4. 构建镜像
+4. 安装binfmt-misc
 
 ```bash
-image-build/build-image.sh gcslaoli/cool-admin-codespace:dev true "linux/arm64"
+docker run --privileged --rm tonistiigi/binfmt --install all
+```
+5. 创建builder
+
+```bash
+docker buildx create --name mybuilder --driver docker-container --bootstrap --use
+```
+
+6. 构建测试镜像
+
+```bash
+image-build/build-image.sh gcslaoli/cool-admin-codespace:dev true "linux/amd64,linux/arm64"
+```
+
+```bash
+image-build/build-image.sh registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-codespace:dev true "linux/amd64,linux/arm64"
+```
+7. 构建正式镜像
+
+```bash
+image-build/build-image.sh cnlidong/cool-admin-codespace:latest true "linux/amd64,linux/arm64"
+```
+
+```bash
+image-build/build-image.sh registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-codespace:latest true "linux/amd64,linux/arm64"
 ```
