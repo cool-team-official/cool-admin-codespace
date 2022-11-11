@@ -1,7 +1,10 @@
-# 开发常用命令集
+.PHONY: help
+help: ## 查看帮助
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
 
 .PHONY: init
-init: ## 初始化项目
+init: ## 初始化项目,用于在开发容器生成后配置一些常用镜像,如: golang, nodejs, docker
 	@echo "初始化项目"
 	@bash ./scripts/init.sh
 	@echo "初始化完成"
