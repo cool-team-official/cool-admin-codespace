@@ -25,8 +25,12 @@ git clone --depth=1 --branch=local https://github.com/cool-team-official/cool-ad
 或者下载 [zip](https://github.com/cool-team-official/cool-admin-codespace/archive/refs/heads/local.zip) 文件.
 
 ```bash
-wget -O cool-admin-codespace.zip https://github.com/cool-team-official/cool-admin-codespace/archive/refs/heads/local.zip
+wget -O cool-admin-codespace.zip \
+https://github.com/cool-team-official/cool-admin-codespace/archive/refs/heads/local.zip
 ```
+
+TIPS:
+如果下载速度过慢，可以使用 [pgit](https://www.lidong.xin/works/pgit.html) 工具下载。
 
 解压
 
