@@ -16,10 +16,7 @@ if [ "$REMOTE_CONTAINERS" = "true" ]; then
         mkdir data
         chmod 777 data
     fi
-    echo "$(hostname)" > data/hostname.txt
-
-
-
+    echo "$(hostname)" >data/hostname.txt
 
     # 配置goproxy
     echo "Configuring goproxy"
