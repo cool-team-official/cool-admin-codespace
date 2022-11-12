@@ -49,7 +49,7 @@ image-build/build-image.sh registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-
 7. 构建正式镜像
 
 ```bash
-image-build/build-image.sh cnlidong/cool-admin-codespace:latest true "linux/amd64,linux/arm64"
+image-build/build-image.sh gcslaoli/cool-admin-codespace:latest true "linux/amd64,linux/arm64"
 ```
 
 ```bash
