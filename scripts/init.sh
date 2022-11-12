@@ -11,7 +11,11 @@ set -e
 if [ "$REMOTE_CONTAINERS" = "true" ]; then
     # 容器开发环境,配置容器内部的环境变量
     echo "Configuring environment variables for container development environment"
-    # 记录hostname到 data/hostname.txt
+    # 记录hostname到 data/hostname.txt 如果 data 目录不存在,则创建
+    if [ ! -d "data" ]; then
+        mkdir data
+        chmod 777 data
+    fi
     echo "$(hostname)" > data/hostname.txt
 
 
