@@ -9,6 +9,17 @@ init: ## 初始化项目,用于在开发容器生成后配置一些常用镜像,
 	@bash ./scripts/init.sh
 	@echo "初始化完成"
 
+.PHONY: clean
+clean: ## 清理项目,用于删除开发容器及存储卷,需在本地开发环境执行
+	@echo "清理项目"
+	@bash ./scripts/clean.sh
+	@echo "清理完成"
+
+.PHONY: setmirror
+setmirror: ## 设置国内镜像源,用于在开发容器生成后配置国内镜像源,需在本地开发环境执行
+	@echo "设置国内镜像源"
+	@bash ./scripts/setmirror.sh
+	@echo "设置完成"
 # 启动mysql
 .PHONY: mysql-up
 mysql-up: ## 启动mysql

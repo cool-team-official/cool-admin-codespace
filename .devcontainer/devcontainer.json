@@ -1,14 +1,14 @@
 {
-    "image": "registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-codespace",
-    "mounts": [
-      {
-        "source": "dind-var-lib-docker-${devcontainerId}",
-        "target": "/var/lib/docker",
-        "type": "volume"
+  "image": "cnlidong/cool-admin-codespace:latest",
+  "mounts": [
+    {
+      "source": "dind-var-lib-docker-${devcontainerId}",
+      "target": "/var/lib/docker",
+      "type": "volume"
     }
-    ],
-    "customizations": {
-      "vscode": {
+  ],
+  "customizations": {
+    "vscode": {
       "extensions": [
         "ms-ceintl.vscode-language-pack-zh-hans",
         "GitHub.vscode-pull-request-github",
@@ -17,12 +17,11 @@
         "vue.volar",
         "cweijan.vscode-database-client2"
       ]
-      }
-    },
-    "containerEnv": {
-      "TZ": "Asia/Shanghai"
-    },
-    "postCreateCommand": "make init",
-    "remoteUser": "root"
-  }
-  
+    }
+  },
+  "containerEnv": {
+    "TZ": "Asia/Shanghai"
+  },
+  "postCreateCommand": "make init",
+  "remoteUser": "root"
+}

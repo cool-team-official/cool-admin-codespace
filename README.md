@@ -2,6 +2,8 @@
 
 基于 vscode devcontainer 的本地开发环境
 
+当前操作系统: Debian GNU/Linux 11 (bullseye)
+
 当前组件：
 
 ```
@@ -9,8 +11,9 @@ nodejs: 18.12.1
 npm: 8.19.2
 yarn: 1.22.19
 nvm: 0.39.2
-go: go1.19.3 linux/amd64
+go: go1.19.3
 docker: 20.10.21
+Python:3.9.2
 ```
 
 ## 下载项目
@@ -52,6 +55,3 @@ docker pull gcslaoli/cool-admin-codespace
 docker pull registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-codespace
 ```
 
-## Gitee 镜像
-
-[![李栋/cool-admin-codespace](https://gitee.com/gcslaoli/cool-admin-codespace/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/gcslaoli/cool-admin-codespace)

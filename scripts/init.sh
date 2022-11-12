@@ -11,6 +11,11 @@ set -e
 if [ "$REMOTE_CONTAINERS" = "true" ]; then
     # 容器开发环境,配置容器内部的环境变量
     echo "Configuring environment variables for container development environment"
+    # 记录hostname到 data/hostname.txt
+    echo "$(hostname)" > data/hostname.txt
+
+
+
 
     # 配置goproxy
     echo "Configuring goproxy"
@@ -20,16 +25,17 @@ if [ "$REMOTE_CONTAINERS" = "true" ]; then
     # 配置npm mirror
     echo "Configuring npm mirror"
     npm config set registry https://registry.npmmirror.com
+    yarn config set registry https://registry.npmmirror.com
 
     # 安装cool-tools
     echo "Installing cool-tools ..."
     go install github.com/cool-team-official/cool-admin-go/cool-tools@latest
     # 安装gf
-    # echo "Installing gf use mirror ..."
-    # wget -O gf \
-    #     https://gh.hjmcloud.cn/github.com/gogf/gf/releases/latest/download/gf_$(go env GOOS)_$(go env GOARCH) &&
-    #     chmod +x gf &&
-    #     ./gf install -y &&
-    #     rm ./gf
+    echo "Installing gf use mirror ..."
+    wget -O gf \
+        https://ghproxy.com/https://github.com/gogf/gf/releases/latest/download/gf_$(go env GOOS)_$(go env GOARCH) &&
+        chmod +x gf &&
+        ./gf install -y &&
+        rm ./gf
 
 fi
