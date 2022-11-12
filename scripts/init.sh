@@ -38,7 +38,7 @@ if [ "$REMOTE_CONTAINERS" = "true" ]; then
     # 安装gf
     echo "Installing gf use mirror ..."
     pgit wget -O gf \
-        https://ghproxy.com/https://github.com/gogf/gf/releases/latest/download/gf_$(go env GOOS)_$(go env GOARCH) &&
+        https://github.com/gogf/gf/releases/latest/download/gf_$(go env GOOS)_$(go env GOARCH) &&
         chmod +x gf &&
         ./gf install -y &&
         rm ./gf
