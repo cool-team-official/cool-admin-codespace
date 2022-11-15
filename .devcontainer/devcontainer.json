@@ -2,6 +2,11 @@
   "image": "gcslaoli/cool-admin-codespace:latest",
   "mounts": [
     {
+      "source": "${localWorkspaceFolder}/scripts/daemon.json",
+      "target": "/etc/docker/daemon.json",
+      "type": "bind"
+    },
+    {
       "source": "dind-var-lib-docker-${devcontainerId}",
       "target": "/var/lib/docker",
       "type": "volume"

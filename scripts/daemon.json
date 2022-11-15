@@ -1,0 +1,9 @@
+{
+    "registry-mirrors": [
+        "https://hub-mirror.c.163.com",
+        "https://mirror.baidubce.com"
+    ],
+    "insecure-registries": [
+        "127.0.0.1:5000"
+    ]
+}
