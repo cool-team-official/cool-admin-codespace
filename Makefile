@@ -16,7 +16,7 @@ clean: ## 清理项目,用于删除开发容器及存储卷,需在本地开发�
 	@echo "清理完成"
 
 .PHONY: setmirror
-setmirror: ## 设置国内镜像源,用于在开发容器生成后配置国内镜像源,需在本地开发环境执行
+setmirror: ## 设置国内镜像源,用于在开发容器生成后配置国内镜像源
 	@echo "设置国内镜像源"
 	@bash ./scripts/setmirror.sh
 	@echo "设置完成"
