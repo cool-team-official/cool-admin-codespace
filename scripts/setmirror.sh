@@ -19,6 +19,9 @@ cp /etc/apt/sources.list /etc/apt/sources.list.bak
 # 替换为163源
 # sed -i 's/deb.debian.org/mirrors.163.com/g' /etc/apt/sources.list
 
+# 替换为ustc源
+# sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+
 # 替换为aliyun源
 sed -i 's@http://\(deb\|security\).debian.org@https://mirrors.aliyun.com@g' /etc/apt/sources.list
 
