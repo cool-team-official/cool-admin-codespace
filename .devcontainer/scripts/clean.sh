@@ -12,12 +12,12 @@ if [ "$REMOTE_CONTAINERS" = "true" ]; then
 fi
 
 # 读取 data/hostname.txt文件内容为容器ID
-hostname=$(cat data/hostname.txt)
+hostname=$(cat .devcontainer/data/hostname.txt)
 
 # 如果hostname为空,则退出
 if [ -z "$hostname" ]; then
-    echo "hostname is empty, please check data/hostname.txt"
-    echo "hostname为空,请检查 data/hostname.txt"
+    echo "hostname is empty, please check .devcontainer/data/hostname.txt"
+    echo "hostname为空,请检查 .devcontainer/data/hostname.txt"
     exit 0
 fi
 

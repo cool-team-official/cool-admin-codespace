@@ -6,47 +6,47 @@ help: ## 查看帮助
 .PHONY: init
 init: ## 初始化项目,用于在开发容器生成后配置一些常用镜像,如: golang, nodejs, docker
 	@echo "初始化项目"
-	@bash ./scripts/init.sh
+	@bash ./.devcontainer/scripts/init.sh
 	@echo "初始化完成"
 
 .PHONY: clean
 clean: ## 清理项目,用于删除开发容器及存储卷,需在本地开发环境执行
 	@echo "清理项目"
-	@bash ./scripts/clean.sh
+	@bash ./.devcontainer/scripts/clean.sh
 	@echo "清理完成"
 
 .PHONY: setmirror
 setmirror: ## 设置国内镜像源,用于在开发容器生成后配置国内镜像源
 	@echo "设置国内镜像源"
-	@bash ./scripts/setmirror.sh
+	@bash ./.devcontainer/scripts/setmirror.sh
 	@echo "设置完成"
 # 启动mysql
 .PHONY: mysql-up
 mysql-up: ## 启动mysql
 	@echo "启动mysql"
-	@docker-compose -f ./docker-compose.yml up -d mysql
+	@docker-compose -f ./.devcontainer/docker-compose.yml up -d mysql
 
 # 停止mysql
 .PHONY: mysql-down
 mysql-down: ## 停止mysql
 	@echo "停止mysql"
-	@docker-compose -f ./docker-compose.yml down mysql
+	@docker-compose -f ./.devcontainer/docker-compose.yml down mysql
 
 # 备份mysql
 .PHONY: mysql-backup
 mysql-backup: ## 备份mysql
 	@echo "备份mysql"
-	@bash ./scripts/mysql-backup.sh
+	@bash ./.devcontainer/devcontainer/scripts/mysql-backup.sh
 
 # 启动redis
 .PHONY: redis-up
 redis-up: ## 启动redis
 	@echo "启动redis"
-	@docker-compose -f ./docker-compose.yml up -d redis
+	@docker-compose -f ./.devcontainer/docker-compose.yml up -d redis
 
 # 停止redis
 .PHONY: redis-down
 redis-down: ## 停止redis
 	@echo "停止redis"
-	@docker-compose -f ./docker-compose.yml down redis
+	@docker-compose -f ./.devcontainer/docker-compose.yml down redis
 	

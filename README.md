@@ -54,8 +54,17 @@ unzip cool-admin-codespace.zip
 docker pull gcslaoli/cool-admin-codespace
 ```
 
-```bash
-# Aliyun
-docker pull registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-codespace
-```
+## 集成命令
 
+```bash
+root ➜ /workspaces/cool-admin-codespace (local ✗) $ make
+clean                          清理项目,用于删除开发容器及存储卷,需在本地开发环境执行
+help                           查看帮助
+init                           初始化项目,用于在开发容器生成后配置一些常用镜像,如: golang, nodejs, docker
+mysql-backup                   备份mysql
+mysql-down                     停止mysql
+mysql-up                       启动mysql
+redis-down                     停止redis
+redis-up                       启动redis
+setmirror                      设置国内镜像源,用于在开发容器生成后配置国内镜像源
+```

@@ -2,7 +2,7 @@
   "image": "gcslaoli/cool-admin-codespace:latest",
   "mounts": [
     {
-      "source": "${localWorkspaceFolder}/scripts/daemon.json",
+      "source": "${localWorkspaceFolder}/.devcontainer/daemon.json",
       "target": "/etc/docker/daemon.json",
       "type": "bind"
     },
