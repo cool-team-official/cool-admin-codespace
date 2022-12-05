@@ -2,6 +2,11 @@
 
 本分支用于构建 Docker 镜像，运行于 `codespaces`环境。
 
+当前基础镜像:
+
+https://github.com/devcontainers/images/blob/main/src/base-debian/history/0.203.1.md
+
+
 ## 开发资料
 
 - [Developing inside a Container](https://code.visualstudio.com/docs/remote/containers) - Visual Studio Code 官方文档 - 容器开发
