@@ -10,6 +10,6 @@ push_flag="${2:-false}"
 # If more than one plaftorm is specified, then push must be set.
 platforms="${3:-linux/amd64}"
 
-devcontainer build --image-name $image_name --platform "$platforms" --push $push_flag --workspace-folder ../workspace
+devcontainer build --image-name $image_name --platform "$platforms" --push $push_flag --workspace-folder ../debian
 
 echo "\nImage ${image_name} built successfully!"
