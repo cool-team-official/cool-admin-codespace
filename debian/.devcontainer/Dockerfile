@@ -6,7 +6,8 @@ RUN wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /
     sqlite3 \
     python3-pip \
     vagrant\
-    && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && vagrant plugin install vagrant-hostsupdater
     # iputils-ping \
     # traceroute \
     # telnet 
