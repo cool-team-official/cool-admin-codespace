@@ -7,9 +7,9 @@ RUN wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /
     sqlite3 \
     python3-pip \
     vagrant\
-    && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && pip install --upgrade pip \
     && pip install ansible
+    # && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
     # iputils-ping \
     # traceroute \
     # telnet 
