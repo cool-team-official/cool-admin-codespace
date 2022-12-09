@@ -21,6 +21,6 @@ build.dev: ## 构建开发测试镜像
 .PHONY: build.latest
 build.latest: ## 构建生产镜像
 	$(info Building latest image...)
-	image-build/build-image.sh gcslaoli/cool-admin-codespace:latest false "linux/amd64,linux/arm64"
+	image-build/build-image.sh gcslaoli/cool-admin-codespace:latest true "linux/amd64,linux/arm64"
 	$(info add log with datetime to build.log)
 	echo "build latest image at $(shell date)" >> build.log
