@@ -4,8 +4,7 @@
 
 当前基础镜像:
 
-https://github.com/devcontainers/images/blob/main/src/base-debian/history/0.203.1.md
-
+https://github.com/devcontainers/images/blob/main/src/base-debian/history/0.203.2.md
 
 ## 开发资料
 

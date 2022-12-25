@@ -1,3 +1,8 @@
+REGISTRY ?= gcslaoli
+IMAGE_NAME ?= cool-admin-codespace
+IMAGE_TAG ?= latest
+IMAGE ?= $(REGISTRY)/$(IMAGE_NAME):$(IMAGE_TAG)
+PLATFORM ?= "linux/amd64,linux/arm64"
 # 显示帮助
 .PHONY: help
 help: Makefile ## 显示帮助
@@ -16,11 +21,11 @@ build.dev: ## 构建开发测试镜像
 	$(info Building test image...)
 	image-build/build-image.sh gcslaoli/cool-admin-codespace:dev true "linux/amd64,linux/arm64"
 	$(info add log with datetime to build.log)
-	echo "build dev image at $(shell date)" >> build.log
+	echo "$(shell date +'%Y-%m-%d %H:%M:%S') Build gcslaoli/cool-admin-codespace:dev for $(PLATFORM) success!" >> build.log 
 # 构建生产镜像
 .PHONY: build.latest
 build.latest: ## 构建生产镜像
 	$(info Building latest image...)
 	image-build/build-image.sh gcslaoli/cool-admin-codespace:latest true "linux/amd64,linux/arm64"
 	$(info add log with datetime to build.log)
-	echo "build latest image at $(shell date)" >> build.log
+	echo "$(shell date +'%Y-%m-%d %H:%M:%S') Build gcslaoli/cool-admin-codespace:latest for $(PLATFORM) success!" >> build.log
