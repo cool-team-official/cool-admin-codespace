@@ -19,13 +19,13 @@ init:	## Creates the buildx instance
 .PHONY: build.dev
 build.dev: ## 构建开发测试镜像
 	$(info Building test image...)
-	image-build/build-image.sh gcslaoli/cool-admin-codespace:dev true "linux/amd64,linux/arm64"
+	image-build/build-image.sh cnlidong/cool-admin-codespace:dev true "linux/amd64,linux/arm64"
 	$(info add log with datetime to build.log)
-	echo "$(shell date +'%Y-%m-%d %H:%M:%S') Build gcslaoli/cool-admin-codespace:dev for $(PLATFORM) success!" >> build.log 
+	echo "$(shell date +'%Y-%m-%d %H:%M:%S') Build cnlidong/cool-admin-codespace:dev for $(PLATFORM) success!" >> build.log 
 # 构建生产镜像
 .PHONY: build.latest
 build.latest: ## 构建生产镜像
 	$(info Building latest image...)
-	image-build/build-image.sh gcslaoli/cool-admin-codespace:latest true "linux/amd64,linux/arm64"
+	image-build/build-image.sh cnlidong/cool-admin-codespace:latest true "linux/amd64,linux/arm64"
 	$(info add log with datetime to build.log)
-	echo "$(shell date +'%Y-%m-%d %H:%M:%S') Build gcslaoli/cool-admin-codespace:latest for $(PLATFORM) success!" >> build.log
+	echo "$(shell date +'%Y-%m-%d %H:%M:%S') Build cnlidongi/cool-admin-codespace:latest for $(PLATFORM) success!" >> build.log

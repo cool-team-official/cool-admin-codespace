@@ -4,12 +4,13 @@
 
 当前基础镜像:
 
-https://github.com/devcontainers/images/blob/main/src/base-debian/history/0.203.2.md
+https://github.com/devcontainers/images/blob/main/src/base-debian/history/0.203.7.md
 
 ## 开发资料
 
 - [Developing inside a Container](https://code.visualstudio.com/docs/remote/containers) - Visual Studio Code 官方文档 - 容器开发
 - [Dev Container CLI](https://code.visualstudio.com/docs/remote/devcontainer-cli) - Visual Studio Code 官方文档 - 容器开发命令行工具
+- [features-sshd](https://github.com/devcontainers/features/tree/main/src/sshd) - Dev Container Features - SSHD - SSH 服务  - 用于远程连接
 
 ## 发布流程
 
@@ -19,43 +20,25 @@ https://github.com/devcontainers/images/blob/main/src/base-debian/history/0.203.
 docker login --username=cnlidong
 ```
 
-2. 登陆 aliyun registry
-
-```bash
-docker login --username=cnlidong@live.cn registry.cn-beijing.aliyuncs.com
-```
-
-3. 安装依赖
+2. 安装依赖
 
 ```bash
 npm install -g @devcontainers/cli
 ```
-4. 安装binfmt-misc
+3. 安装binfmt-misc
 
 ```bash
-docker run --privileged --rm tonistiigi/binfmt --install all
-```
-5. 创建builder
-
-```bash
-docker buildx create --name mybuilder --driver docker-container --bootstrap --use
+make init
 ```
 
-6. 构建测试镜像
+4. 构建测试镜像
 
 ```bash
-image-build/build-image.sh gcslaoli/cool-admin-codespace:dev true "linux/amd64,linux/arm64"
+make build.dev
 ```
 
-```bash
-image-build/build-image.sh registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-codespace:dev true "linux/amd64,linux/arm64"
-```
-7. 构建正式镜像
+5. 构建正式镜像
 
 ```bash
-image-build/build-image.sh gcslaoli/cool-admin-codespace:latest true "linux/amd64,linux/arm64"
-```
-
-```bash
-image-build/build-image.sh registry.cn-beijing.aliyuncs.com/gcslaoli/cool-admin-codespace:latest true "linux/amd64,linux/arm64"
+make build.latest
 ```
