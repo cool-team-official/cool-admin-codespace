@@ -5,3 +5,4 @@ build latest image at Fri Dec  9 19:15:14 CST 2022
 2022-12-24 14:24:10 Build gcslaoli/cool-admin-codespace:latest for linux/amd64,linux/arm64 success!
 2023-03-15 20:57:59 Build cnlidong/cool-admin-codespace:dev for linux/amd64,linux/arm64 success!
 2023-03-16 14:00:05 Build docker.io/cnlidong/cool-admin-codespace:latest for linux/amd64,linux/arm64 success!
+2024-03-25 01:42:49 Build docker.io/cnlidong/cool-admin-codespace:dev for linux/amd64,linux/arm64 success!
